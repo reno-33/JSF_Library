@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<style type="text/css">
+#full {
+	background: #69D2E7;
+	height: 100%;
+}
+</style>
+	<title>Library</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<h:outputStylesheet library="css" name="hamburger.css" />
+
+
+</h:head>
+<h:body>
+
+	<div class="l-site">
+		<div class="l-nav">
+			<nav class="nav">
+			<ul>
+				<li><p>
+						<h:outputLink class="nav-primary" value="index.xhtml">Library</h:outputLink>
+					</p></li>
+				<li><p>
+						<h:outputLink class="nav-primary" value="list-borrows.xhtml">Borrows</h:outputLink>
+					</p></li>
+				<li><p>
+						<h:outputLink class="nav-primary" value="list-members.xhtml">Members</h:outputLink>
+					</p></li>
+				<li><p>
+						<h:outputLink class="nav-primary" value="list-stock.xhtml">Stock</h:outputLink>
+					</p></li>
+				<li><p>
+						<h:outputLink class="nav-secondary" value="add-member-form.xhtml">Add new member</h:outputLink>
+					</p></li>
+				<li><p>
+						<h:outputLink class="nav-secondary" value="add-stock-form.xhtml">Add new item</h:outputLink>
+					</p></li>
+				<li><p>
+						<h:outputLink class="nav-secondary" value="list-past-due.xhtml">Past due borrows</h:outputLink>
+					</p></li>
+
+				<li><h:form style="color:#ffffff">Active borrows for 
+						<h:inputText class="line"
+							value="#{borrowviewcontroller.days}" /> days 
+<h:commandButton class="modern" value="Query"
+							action="#{borrowviewcontroller.borrowedDays}"></h:commandButton>
+
+					</h:form></li>
+			</ul>
+
+			</nav>
+			</div>
+			
+			
+					<div class="l-page">
+			<div class="menu">
+				<div class="menu-hamburger"></div>
+			</div>
+
+
+			<section class="band band-a">
+				<div class="band-container">
+					<div id="full">
+						<h3>Keszlet szerkesztese</h3>
+
+
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</h:body>
+</html>
